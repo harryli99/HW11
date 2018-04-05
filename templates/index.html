@@ -47,7 +47,7 @@ table{
     <h2 class="heading"><strong>Featured Mars Image</strong></h2>
     <div class="container">
       <div class="row" id="feat_image">
-          <div class="col-md-8 text-center"><img class="image-responsive" style="width:100%" src="{{elements.featured_image}}"/></div>
+          <div class="col-md-8 text-center"><img class="img-responsive" style="width:100%" src="{{elements.featured_image}}"/></div>
           
           <div class="col-md-4" id="mars_current_weather"><h4 style="padding:0px"><strong>Current Weather on Mars</strong><p style="margin:5px">{{ elements.weather }}</p></h4></div>
           <div class="col-md-4 right table" id="mars_facts_table"><h4><strong>Mars Facts</strong></h4>{{ elements.table |safe }}</div>
@@ -61,8 +61,8 @@ table{
       <h2 class="heading text-center"><strong>Mars Hemispheres</strong></h2> 
       <div class="row mars_hemis">
         {% for dict in hemi_urls %}
-        <div class="col-md-6"><img class="image-responsive" style="width:100%" src = "{{dict[0].img_url}}"/></div>
-        <div class="col-md-6"><img class="image-responsive" style = "width:100%" src = "{{dict[1].img_url}}"/></div>
+        <div class="col-md-6"><img class="img-responsive" style="width:100%" src = "{{dict[0].img_url}}"/></div>
+        <div class="col-md-6"><img class="img-responsive" style = "width:100%" src = "{{dict[1].img_url}}"/></div>
       </div>
       </div>
         <div class="container">
@@ -74,8 +74,8 @@ table{
     </div>
     <div class="container">
         <div class="row mars_hemis">
-          <div class="col-md-6"><img class="image-responsive" style="width:100%" src = "{{dict[2].img_url}}"/></div>
-          <div class="col-md-6"><img class="image-responsive" style = "width:100%" src = "{{dict[3].img_url}}"/></div>
+          <div class="col-md-6"><img class="img-responsive" style="width:100%" src = "{{dict[2].img_url}}"/></div>
+          <div class="col-md-6"><img class="img-responsive" style = "width:100%" src = "{{dict[3].img_url}}"/></div>
         </div>
         </div>
           <div class="container">
