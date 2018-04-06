@@ -60,7 +60,7 @@ def scrape():
     browser.visit(twitter_url)
     html = browser.html
     soup = BeautifulSoup(html, 'html.parser')
-    tweet_text = soup.find('p', class_='TweetTextSize TweetTextSize--normal js-tweet-text tweet-text')
+    tweet_text = soup.find_all('p', class_='TweetTextSize TweetTextSize--normal js-tweet-text tweet-text')
     for tweets in tweet_text:               #searches the latest weather tweet while ignoring pinned tweets.
         if (tweets.text.strip().startswith('Sol')):
             mars_weather = tweets.text.strip()
