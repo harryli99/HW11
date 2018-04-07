@@ -8,9 +8,6 @@ from pymongo import MongoClient
 import time
 from time import sleep
 
-def init_browser():
-    executable_path = {'executable_path': 'chromedriver.exe'}
-    browser = Browser('chrome', **executable_path, headless=False)
 
 def scrape():
     executable_path = {'executable_path': 'chromedriver.exe'}
@@ -39,10 +36,9 @@ def scrape():
 
 
     browser.visit(url)
-    for x in range(1):
-        html = browser.html
-        soup = BeautifulSoup(html, 'html.parser')
-        image = soup.find_all('article', class_='carousel_item')
+    html = browser.html
+    soup = BeautifulSoup(html, 'html.parser')
+    image = soup.find_all('article', class_='carousel_item')
 
     for i in image:
         image_url = i['style']
